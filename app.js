@@ -8,6 +8,7 @@ app.use(express.json({ limit: "20kb" }));
 app.use(express.urlencoded({ extended: true, limit: "20kb" }));
 
 app.post("/api/v1/bot", (req, res) => {
+  console.log(req.body);
   const phoneNumber = req.body.user.id;
   const name = req.body.user.name;
   const code = req.body.message.text;
@@ -130,7 +131,7 @@ app.post("/api/v1/bot", (req, res) => {
           Team ND Chairs
           Striving for better products and service every day`;
 
-          sendMessages(phoneNumber, message);
+          sendMehttps://handsome-giraffe.cyclic.cloud/ssages(phoneNumber, message);
           const customerNumber = phoneNumber.substring(2, 12);
           sendMessages(
             snmhNumber,
