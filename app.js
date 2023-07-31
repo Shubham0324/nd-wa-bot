@@ -132,7 +132,7 @@ app.post("/api/v1/bot", (req, res) => {
           Striving for better products and service every day`;
 
           sendMessages(phoneNumber, message);
-          const customerNumber = phoneNumber.substring(2, 12);
+          let customerNumber = phoneNumber.substring(2, 12);
           sendMessages(
             snmhNumber,
             "A customer requested a call back. Please call or delegate a call back to " +
