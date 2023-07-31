@@ -8,7 +8,7 @@ app.use(express.json({ limit: "20kb" }));
 app.use(express.urlencoded({ extended: true, limit: "20kb" }));
 
 app.post("/api/v1/bot", (req, res) => {
-  console.log();
+  console.log(req.body);
   const phoneNumber = req.body.user.id;
   const name = req.body.user.name;
   const code = req.body.message.text;
